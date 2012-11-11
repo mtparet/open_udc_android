@@ -90,8 +90,8 @@ import android.location.Location;
        This number should so be equal to 0 for almost every one.
 
   example: if a individual is registered as
-         - first names: François-Xavier-Robert,Lucien
-         - last name: DE CLÉREL-DE-TOCQUEVILLE
+         - first names: FranÔøΩois-Xavier-Robert,Lucien
+         - last name: DE CLÔøΩREL-DE-TOCQUEVILLE
          - birth date: 14 July 1989
          - birthplace: Paris 15
 
@@ -154,7 +154,7 @@ public class Udid2 {
 		this.number = number;
 		this.generate_hashed();
 	}
-	
+		
 	/**
 	 * 
 	 * @param udid2

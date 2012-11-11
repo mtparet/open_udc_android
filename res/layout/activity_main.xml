@@ -24,4 +24,21 @@
         android:onClick="onClick"
         android:text="@string/bouton_udid2" />
 
+    <TextView
+        android:id="@+id/tvClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="98dp"
+        android:text="Udid2 clear" />
+
+    <TextView
+        android:id="@+id/tvHashed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvClear"
+        android:layout_alignTop="@+id/tvClear"
+        android:layout_marginTop="31dp"
+        android:text="Udid2 hashed" />
+
 </RelativeLayout>

@@ -11,11 +11,14 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
+import android.content.SharedPreferences;
 import android.view.Menu;
 import android.view.View;
 import android.widget.DatePicker;
@@ -93,7 +96,7 @@ public class Udid extends Activity {
 			}else{
 				ArrayList<String> listAddress = new ArrayList<String>();
 				for( Address address : listAdd){
-					listAddress.add(address.getLocality());
+					listAddress.add(address.getLocality() + "  " + address.getCountryName());
 				}
 				
 				CharSequence[] csAddress = listAddress.toArray(new CharSequence[listAddress.size()]);
@@ -137,6 +140,13 @@ public class Udid extends Activity {
 			tv_udid.setText(udid2_clear);
 			String udid2_hashed = udid2.getUdid2_hashed();
 			tv_udid_2.setText(udid2_hashed);
+			
+			SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+	        SharedPreferences.Editor editor=prefs.edit();
+	        editor.putString("udid2_c", udid2_clear);
+	        editor.putString("udid2_h", udid2_hashed);
+
+	        editor.commit();
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
