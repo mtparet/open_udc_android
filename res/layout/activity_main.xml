@@ -29,8 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="98dp"
-        android:text="Udid2 clear" />
+        android:layout_marginBottom="98dp" />
 
     <TextView
         android:id="@+id/tvHashed"
@@ -38,7 +37,24 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tvClear"
         android:layout_alignTop="@+id/tvClear"
-        android:layout_marginTop="31dp"
-        android:text="Udid2 hashed" />
+        android:layout_marginTop="31dp" />
+
+    <Button
+        android:id="@+id/test1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/create_udid2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:onClick="onClick"
+        android:text="Button" />
+
+    <TextView
+        android:id="@+id/tvKeyId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvHashed"
+        android:layout_marginTop="18dp"/>
 
 </RelativeLayout>
